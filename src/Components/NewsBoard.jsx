@@ -5,7 +5,7 @@ const NewsBoard = ({category}) => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    const baseURL = "https://news-lqtzjfyaz-mbinyas-projects.vercel.app/api/news/";
+    const baseURL = "https://news-lqtzjfyaz-mbinyas-projects.vercel.app/api/news";
 
     const url = `${baseURL}/${category}`;
     fetch(url).then(response=> response.json()).then(data=> setArticles(data.articles));
